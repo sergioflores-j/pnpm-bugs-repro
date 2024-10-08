@@ -1,0 +1,73 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+catalogs:
+  default:
+    '@tsconfig/node20':
+      specifier: ^20.1.4
+      version: 20.1.4
+    '@types/node':
+      specifier: ^20.8.4
+      version: 20.16.2
+    typescript:
+      specifier: ^4.7.4
+      version: 4.9.5
+
+importers:
+
+  .: {}
+
+  packages/package-a:
+    devDependencies:
+      '@tsconfig/node20':
+        specifier: catalog:default
+        version: 20.1.4
+      '@types/node':
+        specifier: catalog:default
+        version: 20.16.2
+      typescript:
+        specifier: catalog:default
+        version: 4.9.5
+
+  packages/package-b:
+    devDependencies:
+      '@tsconfig/node20':
+        specifier: catalog:default
+        version: 20.1.4
+      '@types/node':
+        specifier: catalog:default
+        version: 20.16.2
+      typescript:
+        specifier: catalog:default
+        version: 4.9.5
+
+packages:
+
+  '@tsconfig/node20@20.1.4':
+    resolution: {integrity: sha512-sqgsT69YFeLWf5NtJ4Xq/xAF8p4ZQHlmGW74Nu2tD4+g5fAsposc4ZfaaPixVu4y01BEiDCWLRDCvDM5JOsRxg==}
+
+  '@types/node@20.16.2':
+    resolution: {integrity: sha512-91s/n4qUPV/wg8eE9KHYW1kouTfDk2FPGjXbBMfRWP/2vg1rCXNQL1OCabwGs0XSdukuK+MwCDXE30QpSeMUhQ==}
+
+  typescript@4.9.5:
+    resolution: {integrity: sha512-1FXk9E2Hm+QzZQ7z+McJiHL4NW1F2EzMu9Nq9i3zAaGqibafqYwCVU6WyWAuyQRRzOlxou8xZSyXLEN8oKj24g==}
+    engines: {node: '>=4.2.0'}
+    hasBin: true
+
+  undici-types@6.19.8:
+    resolution: {integrity: sha512-ve2KP6f/JnbPBFyobGHuerC9g1FYGn/F8n1LWTwNxCEzd6IfqTwUQcNXgEtmmQ6DlRrC1hrSrBnCZPokRrDHjw==}
+
+snapshots:
+
+  '@tsconfig/node20@20.1.4': {}
+
+  '@types/node@20.16.2':
+    dependencies:
+      undici-types: 6.19.8
+
+  typescript@4.9.5: {}
+
+  undici-types@6.19.8: {}

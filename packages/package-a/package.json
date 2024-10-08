@@ -1,0 +1,17 @@
+{
+  "name": "@pnpm-bugs-repro/package-a",
+  "version": "0.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "pnpm exec tsc --skipLibCheck --outDir dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "catalog:default",
+    "@tsconfig/node20": "catalog:default",
+    "typescript": "catalog:default"
+  }
+}

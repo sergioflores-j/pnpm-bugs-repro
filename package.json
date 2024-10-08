@@ -1,0 +1,9 @@
+{
+  "name": "pnpm-bugs-repro",
+  "version": "0.0.0",
+  "license": "ISC",
+  "engines": {
+    "node": "=20.x"
+  },
+  "packageManager": "pnpm@9.12.0"
+}
