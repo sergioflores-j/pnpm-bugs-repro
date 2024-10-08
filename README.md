@@ -17,7 +17,7 @@ Only the `specifier` of the catalog dependency gets changed but the `resolved` v
 
 #### Secondary behavior
 
-If running `pnpm i` from a package. Only that packages starts resolving the new version and the catalog still refers to the old one.
+If running `pnpm i` from a package (e.g. inside the directory `packages/package-a`). Only that packages starts resolving the new version and the catalog still refers to the old one.
 
 ![Specifier bug from package](./attachments/specifier-when-from-package.png)
 
@@ -39,8 +39,8 @@ IMHO as the catalog is a centralized configuration, all packages should be updat
 
 ### Steps to reproduce:
 
-1. Set in .npmrc `dedupe-peer-dependents=false`
-2. Run `pnpm i --fix-lockfile`
+1. Set in .npmrc `recursive-install=false`
+2. Run `pnpm i --fix-lockfile` from the root of the repo
 
 ### Current behavior
 
